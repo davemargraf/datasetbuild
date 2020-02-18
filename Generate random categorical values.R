@@ -2,7 +2,7 @@
 library(dplyr)
 library(ggplot2)
 
-# Set your seed number if you want to reproduce your pseudorandomly generated numbers.
+# Set your seed number if you want to reproduce your pseudo randomly generated numbers.
 set.seed(1907)
 
 x <- runif(1000,0,1000)
@@ -16,7 +16,7 @@ df <- df %>%
     z <= 3 & z > 2 ~ "C"
   ))
 
-# We can change the distrubtion of 'c' to have probabilistic interpretaion to simualte different properotions of categorical values.
+# We can change the distribution of 'c' to have probabilistic interpretation to simulate different proportions of categorical values.
 z <- runif(1000,0,1)
 df <- tibble(x,y,z)
 df <- df %>%
@@ -31,4 +31,3 @@ p <- ggplot(df, aes(x, y, color = c)) +
   geom_point() +
   theme_bw()
 p
-
